@@ -17,21 +17,33 @@ let winPattern = [
 ];
 
 const enableBoxes = () =>{
-    for (let box of cells){
-        box.disabled=false;
-        box.innerHTML="";
+    for (let cell of cells){
+        cell.disabled=false;
+        cell.innerHTML="";
     }
 }
+
 cells.forEach((cell) =>{
     cell.addEventListener("click", () => {
+        // if(turn0){
+        //     cell.innerHTML="O";
+        //     turn0=true;
+        
+        // }else{
+        //     cell.innerHTML="X";
+        //     turn0=false;
+        // }
+        // cell.disabled=false;
         if(turn0){
-            cell.innerHTML="O";
-            turn0=false;
-        }else{
-            cell.innerHTML="X";
-            turn0=true;
-        }
-        cell.disabled=true;
+    cell.innerHTML="O";
+    turn0=false;  // ← Changed to false
+}else{
+    cell.innerHTML="X";
+    turn0=true;   // ← Changed to true
+}
+cell.disabled=true;  // ← Changed to true
+
+
         count++;
         checkWinner();
 
@@ -39,7 +51,9 @@ cells.forEach((cell) =>{
             winnerMsg.classList.remove("hide");
             winnerMsg.innerText = "😐 It's a Draw!";
         }
-    })
+    }
+)
+
 })
 
 const checkWinner = () => {
@@ -47,7 +61,7 @@ const checkWinner = () => {
         p1=cells[pattern[0]].innerText;
         p2=cells[pattern[1]].innerText;
         p3=cells[pattern[2]].innerText;
-        if(p1===p2 && p2===p3 && p2===p3){
+        if(p1!=="" && p1===p2 && p2===p3){
             winMsg.classList.remove("hide");
             winMsg.innerText=`🎉WINNER ${p1}`;
             cells.forEach((cell) => (cell.disabled=true));
