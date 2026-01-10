@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>calculation result</h1>
+        <input type="text" id="display" readonly placeholder="0">
+        <div class="operations">
+            <button class="cell spc1" id="x">⌫</button>
+            <button class="cell spc1" id="clear">AC</button>
+            <button class="cell spc1" data-value="%">%</button>
+            <button class="cell spc2" data-value="/">/</button>
+            <button class="cell num" data-value="7">7</button>
+            <button class="cell num" data-value="8">8</button>
+            <button class="cell num" data-value="9">9</button>
+            <button class="cell spc2" data-value="*">*</button>
+            <button class="cell num" data-value="4">4</button>
+            <button class="cell num" data-value="5">5</button>
+            <button class="cell num" data-value="6">6</button>
+            <button class="cell spc2" data-value="-">-</button>
+            <button class="cell num" data-value="1">1</button>
+            <button class="cell num" data-value="2">2</button>
+            <button class="cell num" data-value="3">3</button>
+            <button class="cell spc2" data-value="+">+</button>
+            <button class="cell num" data-value="00">00</button>
+            <button class="cell num" data-value="0">0</button>
+            <button class="cell num" data-value=".">.</button>
+            <button class="cell spc2" id="equal">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -61,7 +61,7 @@ const checkWinner = () => {
         p1=cells[pattern[0]].innerText;
         p2=cells[pattern[1]].innerText;
         p3=cells[pattern[2]].innerText;
-        if(p1!=="" && p1===p2 && p2===p3){
+        if(p1!="" && p1===p2 && p2===p3){
             winMsg.classList.remove("hide");
             winMsg.innerText=`🎉WINNER ${p1}`;
             cells.forEach((cell) => (cell.disabled=true));

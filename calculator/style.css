@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    font-family: arial;
+    border: border_box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: #000000;
+    height: 600px;
+    width: 350px;
+    border: 2px black solid;
+    border-radius: 1rem;
+    margin-top: 5rem;
+}
+#display{
+    width: 300px;
+    border: none;
+    height: 60px;
+    margin: 25px;
+    background-color: #000000;
+    color: white;
+    font-size: 3rem;
+    
+}
+.cell {
+    border: none;
+    border-radius: 50%; 
+    height: 65px;
+    width: 65px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+.operations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 25px;
+}
+.spc1{
+    background-color: #A5A5A5;
+    color: #000000;
+}
+.spc2{
+    background-color: #ff9f0a;
+    color: #FFFFFF;
+}
+.num{
+    background-color: #D4D4D2;  /* Light gray like in the image */
+    color: #000000;  /* Black text */
+}
