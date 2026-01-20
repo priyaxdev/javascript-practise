@@ -1,0 +1,51 @@
+/* DEFAULT DARK MODE */
+body.dark-mode {
+  background-color: #0b0f1a;
+  color: white;
+}
+
+/* LIGHT MODE */
+body.light-mode {
+  background-color: #f4f6ff;
+  color: black;
+}
+
+/* Card Styling */
+.card {
+  background-color: #121826;
+  color: white;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Light mode cards */
+body.light-mode .card {
+  background-color: white;
+  color: black;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+h2 {
+  font-weight: 700;
+}
+
+/* Smooth transition when changing mode */
+body, .card {
+  transition: background-color 0.4s, color 0.4s;
+}
+#loader {
+  /* This ensures it covers the full screen or stays on top */
+  z-index: 9999 !important; 
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: dims the background */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
