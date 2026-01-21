@@ -136,6 +136,7 @@ const search = () => {
 srch.addEventListener("click",search);
 city.addEventListener("keydown",(e) =>{
     if(e.key==="Enter"){
+        e.preventDefault(); 
         search();
     }
 })
